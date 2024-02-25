@@ -1,0 +1,20 @@
+.main{
+    height: 100vh;
+    background-image: url("../../../../images/_2ff6719b-8890-430d-868e-6e8e3500cf63.jpeg");
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+    
+}
+
+.main {
+  width: 100%;
+  overflow: auto; /* Enable scrolling on the content */
+  position: relative; /* Establish a new positioning context for children */
+}
+
+.page-title{
+    font-size: 50px;
+    color:  white;
+    margin: 10px;
+}

@@ -1,0 +1,114 @@
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.with-user{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.nav-brand{
+  margin-left: 2%;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  flex-grow: 1; 
+  text-align: left; 
+}
+
+.username {
+  width: 10%;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  flex-grow: 2; 
+  text-align: center; 
+}
+
+.user-text{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.btns{
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  flex-grow: 1; 
+  text-align: right; 
+}
+
+
+
+.user-text p, .user-text h3{
+  margin: 0;
+}
+
+.write-link {
+  text-decoration: none;
+  color: white;
+  margin-right: 3%;
+  background-color: black;
+  border-radius: 5px;
+  width: 120px;
+  text-align: center;
+  
+}
+
+.logout-btn {
+  text-decoration: none;
+  color: white;
+  margin-right: 2%;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+  text-align: center;
+}
+
+.write-link:hover{
+ box-shadow: 0px 0px 5px 1px white;
+}
+
+.logout-btn:hover{
+  box-shadow: 0px 0px 5px 1px white;
+}
+
+.without-user{
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.home-link, .signup-link, .lg-link{
+  text-decoration: none;
+  color: black;
+}
+
+.home-link-btn, .s-btn, .lg-btn{
+  border: 2px solid blue;
+  border-radius: 10px;
+  text-align: center;
+  width: 100px;
+}
+
+.lg-btn{
+  margin-right: 5px;
+}
+
+.with-user, .without-user{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

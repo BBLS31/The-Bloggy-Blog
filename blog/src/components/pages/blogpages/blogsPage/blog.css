@@ -1,0 +1,91 @@
+.blogs{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   width: 100%;
+   margin-bottom: 0.8%;
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover; /* This will ensure the images maintain their aspect ratio */
+}
+
+.img{
+    flex: 1; /* This will ensure the image container takes up the same space across all blog posts */
+    margin-right: 20px;
+}
+
+.blog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: auto; /* This will center the blog */
+  background-color: #000000b1;
+  width: 60%;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 20px;
+}
+
+.text {
+  flex: 2; /* This will ensure the text container takes up the remaining space */
+}
+
+.blog .text a{
+  text-decoration: none;
+  color: white;
+}
+
+.blog .text h2{
+    font-size: 1.8rem;
+}
+
+.blog div.info{
+    margin: 3px 0; /* Reduced margin */
+    color: #ffffff;
+    font-size: .7rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* This will stack the author and time vertically */
+    align-items: center; /* This will center the author and time horizontally */
+}
+
+.blog p.info p.author{
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.blog p.summary{
+    margin: 5px 0; /* Reduced margin */
+    line-height: 0.6rem; /* Reduced line-height */
+    color: white;
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  /* CSS styles for mobile devices */
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  img{
+   height: 100%;
+   width: 100%;
+    object-fit: cover;
+}
+
+.img{
+    flex: 1; /* This will ensure the image container takes up the same space across all blog posts */
+    margin-right: 20px;
+}
+}
+
+/* For desktops and laptops */
+@media (min-width: 1025px) {
+  /* CSS styles for desktops and laptops */
+}

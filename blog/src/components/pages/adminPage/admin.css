@@ -1,0 +1,82 @@
+.adminPage {
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  background-image: url("../../../images/_5b8c39b7-8b95-4358-9dc4-4089cdab87a3.jpeg"), linear-gradient(to bottom right, #ffc400, #ffc400);
+  background-size: cover;  /* Scale the image to fit the element */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat;  /* Do not repeat the image */
+  background-attachment: fixed;  /* Keep the background fixed while scrolling */
+  overflow: hidden;
+}
+
+.page{
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+.admin-header {
+  color: white;
+}
+
+.admin-su-link, .admin-li-link {
+  text-decoration: none;
+  color: white;
+}
+
+.admin-li-btn, .admin-su-btn {
+  width: 100px;
+  border-radius: 10px;
+  background-color: black;
+  color: white; /* Add this if your buttons have text */
+}
+
+
+.drop {
+  align-items: center;
+}
+
+.users{
+    background-color: #ffc400cf;
+    width: 10%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.ai{
+    width: 100%;
+}
+
+.admin-img{
+    width: 50%;
+}
+
+.base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.admin-container {
+  width: 50%;
+  margin-top: 32px;
+  border: 2px solid black;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.386);
+}
+
+.content{
+    margin-top: 20px;
+}

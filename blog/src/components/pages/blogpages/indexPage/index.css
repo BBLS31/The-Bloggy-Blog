@@ -1,0 +1,84 @@
+.index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../../../../images/_ac298c7e-10d2-4f21-bbb1-7096d4eb7061.jpeg"), linear-gradient(to bottom right, #ffc400, #ffc400);
+    background-size: contain;  /* Scale the image to fit the element */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+}
+
+
+
+.index-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    z-index: 9999;
+}
+
+.su-btn, .si-btn{
+    background-color: rgba(213, 169, 37, 0.54);
+    border: 3.2px solid rgb(255, 255, 0);
+    border-radius: 10px;
+    width: 200px;
+    font-size: larger;
+    color: white;
+}
+
+.su-btn:hover{
+   background-color:  rgb(100, 135, 181);
+   border: 3.2px solid rgb(9, 71, 89);
+}
+
+.si-btn:hover{
+    background-color:  rgb(100, 135, 181);
+    border: 3.2px solid rgb(9, 71, 89);
+}
+
+.title{
+    z-index: 9999;
+}
+
+.welcome1{
+margin-left: 25%;
+width: 50%;
+font-size: 2rem;
+color: white;
+text-align: center;
+border: 5px solid rgb(213, 169, 37);
+border-radius: 10px;
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+.welcome2{
+font-size: 5rem;
+color: white;
+text-align: center;
+border: 5px solid rgb(100, 135, 181);
+border-radius: 10px;
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ .index{
+   background-image: url("../../../../images/_ac298c7e-10d2-4f21-bbb1-7096d4eb7061.jpeg");
+    background-size: cover;  /* Scale the image to cover the element */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+ }
+}
+
+@media (max-width: 767px) {
+  .index{
+     background-image: url("../../../../images/_ac298c7e-10d2-4f21-bbb1-7096d4eb7061.jpeg");
+    background-size: cover;  /* Scale the image to cover the element */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+  }
+}

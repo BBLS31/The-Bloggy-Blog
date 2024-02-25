@@ -1,0 +1,36 @@
+.write{
+    background-image: url("../../../../images/_2a69d519-43b4-4874-85b8-1e9c59ed0a58.jpeg");
+    background-size: cover;  /* Scale the image to cover the element */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Do not repeat the image */
+}
+
+.form-item {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#file{
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.quill{
+  background-color: white;
+}
+
+.ql-editor {
+  font-size: 15px;
+}
+
+#form-btn{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.825);
+}
+
+
+.blog-form{
+    width: 100%; 
+}
