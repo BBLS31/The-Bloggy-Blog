@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 // Connecting to MongoDB using the connection string from the environment variables
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(
+  "mongodb+srv://Ben:nBFfGxgSIPjGzZ5F@blog.nkvqjvp.mongodb.net/?retryWrites=true&w=majority"
+);
 
 // Once the connection is open, log a message to the console
 mongoose.connection.once("open", function () {

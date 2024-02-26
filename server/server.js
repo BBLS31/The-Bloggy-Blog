@@ -48,6 +48,7 @@ app.use(
   })
 );
 
+
 // Using the express.json middleware to parse incoming requests with JSON payloads
 app.use(express.json());
 
@@ -56,7 +57,6 @@ app.use(cookieParser());
 
 // Serving static files (in this case, the uploaded files) from the 'uploads' directory
 app.use("/uploads", express.static(__dirname + "/uploads"));
-
 
 // user signup
 // Defining a POST route at '/signup'
