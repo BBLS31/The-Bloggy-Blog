@@ -11,7 +11,7 @@ const Index = () => {
         <div className="title">
           {/* Display a welcome message */}
           <h3 className="welcome1">Welcome to</h3>
-          <h1 className="welcome2">THE BLOG SPOT</h1>
+          <h1 className="welcome2">THE BLOGGY BLOG APP</h1>
         </div>
         <div className="index-btns">
           {/* Link to the signup page */}
