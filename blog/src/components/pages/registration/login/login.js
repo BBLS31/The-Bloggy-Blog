@@ -34,6 +34,9 @@ const Login = () => {
         // Redirect to the main page
         setRedirect(true);
       });
+
+      // Set the JWT token in a cookie with the SameSite=None and Secure attributes
+      document.cookie = `token=${response.token}; SameSite=None; Secure`;
     } else {
       alert("Login failed");
     }
