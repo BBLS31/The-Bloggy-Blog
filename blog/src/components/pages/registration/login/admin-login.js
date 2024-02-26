@@ -17,7 +17,7 @@ const Adminlogin = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     const response = await fetch(
-      "https://the-bloggy-blog.onrender.com/admin-login",
+      "https://the-bloggy-blog-api.onrender.com/admin-login",
       {
         method: "POST",
         body: JSON.stringify({ username, password }),

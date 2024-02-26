@@ -11,7 +11,7 @@ const Main = () => {
 
   // Fetch the blogs when the component mounts
   useEffect(() => {
-    fetch("https://the-bloggy-blog.onrender.com/blogs")
+    fetch("https://the-bloggy-blog-api.onrender.com/blogs")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

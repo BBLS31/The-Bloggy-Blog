@@ -117,8 +117,8 @@ app.post("/login", async (req, res) => {
           if (error) {
             return res.status(500).json({ error: "Error signing the token" });
           }
-          // If the token is successfully signed, set it as a cookie and return the user ID and username as a JSON response
-          res.cookie("token", token).json({
+          // If the token is successfully signed, set it as a cookie with SameSite=None and Secure attributes and return the user ID and username as a JSON response
+          res.cookie("token", token, { sameSite: "none", secure: true }).json({
             id: user._id,
             username,
           });

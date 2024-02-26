@@ -49,7 +49,7 @@ const Edit = () => {
 
   // Fetch the blog information when the component mounts
   useEffect(() => {
-    fetch("https://the-bloggy-blog.onrender.com/blogs/" + id).then((response) => {
+    fetch("https://the-bloggy-blog-api.onrender.com/blogs/" + id).then((response) => {
       response.json().then((blogInfo) => {
         // Update the state variables with the blog information
         setTitle(blogInfo.title);
@@ -71,7 +71,7 @@ const Edit = () => {
       data.set("file", files?.[0]);
     }
 
-    const response = await fetch("https://the-bloggy-blog.onrender.com/post", {
+    const response = await fetch("https://the-bloggy-blog-api.onrender.com/post", {
       method: "PUT",
       body: data,
       credentials: "include",

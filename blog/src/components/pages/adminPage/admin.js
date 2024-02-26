@@ -13,7 +13,7 @@ const Admin = () => {
 
   // Fetch the list of users when the component mounts
   useEffect(() => {
-    fetch("https://the-bloggy-blog.onrender.com/users", {
+    fetch("https://the-bloggy-blog-api.onrender.com/users", {
       credentials: "include",
     })
       .then((response) => response.json())
@@ -25,7 +25,7 @@ const Admin = () => {
     if (selectedUser) {
       const user = users.find((user) => user._id === selectedUser);
       setSelectedUserName(user ? user.username : ""); // Update the selectedUserName state variable
-      fetch(`https://the-bloggy-blog.onrender.com/user-blogs/${selectedUser}`, {
+      fetch(`https://the-bloggy-blog-api.onrender.com/user-blogs/${selectedUser}`, {
         credentials: "include",
       })
         .then((response) => response.json())
@@ -78,7 +78,7 @@ const Admin = () => {
                   <div className="ai">
                     <img
                       className="admin-img"
-                      src={`https://the-bloggy-blog.onrender.com/${blog.cover}`}
+                      src={`https://the-bloggy-blog-api.onrender.com/${blog.cover}`}
                       alt={blog.title}
                     />
                   </div>

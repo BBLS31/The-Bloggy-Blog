@@ -15,7 +15,7 @@ const Signup = () => {
   async function handleSubmit(e) {
     e.preventDefault();
     const response = await fetch(
-      "https://the-bloggy-blog.onrender.com/signup",
+      "https://the-bloggy-blog-api.onrender.com/signup",
       {
         method: "POST",
         body: JSON.stringify({ username, password }),

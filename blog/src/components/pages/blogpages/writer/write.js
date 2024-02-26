@@ -54,7 +54,7 @@ const Write = () => {
     data.set("file", files[0]);
 
     const response = await fetch(
-      "https://the-bloggy-blog.onrender.com/create",
+      "https://the-bloggy-blog-api.onrender.com/create",
       {
         method: "POST",
         body: data,
