@@ -15,7 +15,10 @@ const Blog = ({ _id, title, summary, cover, content, createdAt, author }) => {
             {/* Link to the blog post */}
             <Link to={`/post/${_id}`}>
               {/* Display the cover image of the blog post */}
-              <img src={"http://localhost:8000/" + cover} alt="" />
+              <img
+                src={"https://the-bloggy-blog.onrender.com/" + cover}
+                alt=""
+              />
             </Link>
           </div>
           <div className="text">
