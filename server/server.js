@@ -40,6 +40,10 @@ app.use(helmet());
 // Using the cors middleware to enable CORS (Cross-Origin Resource Sharing) with specific options
 app.use(
   cors({
+    origin: "*", // Specifies the origin to which the server can respond
+    methods: ["GET", "POST", "PUT", "DELETE"], // Specifies the methods allowed when accessing the resource
+    allowedHeaders: ["Content-Type", "Authorization"], // Specifies the headers that are allowed
+    exposedHeaders: ["Content-Disposition"], // Specifies the headers that the client can access
     credentials: true, // Indicates whether the request can include user credentials like cookies, HTTP authentication or client-side SSL certificates
   })
 );
