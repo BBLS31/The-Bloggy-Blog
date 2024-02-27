@@ -53,11 +53,14 @@ const Write = () => {
     data.set("content", content);
     data.set("file", files[0]);
 
-    const response = await fetch("http://localhost:8000/create", {
-      method: "POST",
-      body: data,
-      credentials: "include",
-    });
+    const response = await fetch(
+      "https://the-bloggy-blog-api.onrender.com/create",
+      {
+        method: "POST",
+        body: data,
+        credentials: "include",
+      }
+    );
 
     if (response.ok) {
       // If the creation was successful, redirect to the main page

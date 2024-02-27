@@ -14,11 +14,14 @@ const Signup = () => {
   // Define the handleSubmit function
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/signup", {
-      method: "POST",
-      body: JSON.stringify({ username, password }),
-      headers: { "Content-Type": "application/json" },
-    });
+    const response = await fetch(
+      "https://the-bloggy-blog-api.onrender.com/signup",
+      {
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
 
     // If the signup was successful, redirect to the login page
     if (response.status === 200) {

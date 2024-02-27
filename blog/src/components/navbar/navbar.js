@@ -11,7 +11,7 @@ const Header = () => {
 
   // Fetch the user's profile when the component mounts
   useEffect(() => {
-    fetch("http://localhost:8000/profile", {
+    fetch("https://the-bloggy-blog-api.onrender.com/profile", {
       credentials: "include",
     })
       .then((response) => response.json())
@@ -26,7 +26,7 @@ const Header = () => {
 
   // Define the logout function
   function logout() {
-    fetch("http://localhost:8000/logout", {
+    fetch("https://the-bloggy-blog-api.onrender.com/logout", {
       credentials: "include",
       method: "POST",
     });
