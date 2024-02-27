@@ -112,3 +112,32 @@
   align-items: center;
   width: 100%;
 }
+
+/*For mobiles*/
+@media (max-width: 767px) {
+  .header{
+    display: none;
+  }
+}
+
+/* For tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+.header{
+  display: none;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .mobilenav{
+    display: none;
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+.mobilenav{
+  display: none;
+}
+}

@@ -16,15 +16,12 @@ const Adminlogin = () => {
   // Define the handleSubmit function
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await fetch(
-      "https://the-bloggy-blog-api.onrender.com/admin-login",
-      {
-        method: "POST",
-        body: JSON.stringify({ username, password }),
-        headers: { "Content-Type": "application/json" },
-        credentials: "include", // Include cookies in the request
-      }
-    );
+    const response = await fetch("http://localhost:8000/admin-login", {
+      method: "POST",
+      body: JSON.stringify({ username, password }),
+      headers: { "Content-Type": "application/json" },
+      credentials: "include", // Include cookies in the request
+    });
 
     if (response.ok) {
       alert("Login successful");

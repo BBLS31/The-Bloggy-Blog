@@ -16,15 +16,12 @@ const Login = () => {
   // Define the handleSubmit function
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await fetch(
-      "https://the-bloggy-blog-api.onrender.com/login",
-      {
-        method: "POST",
-        body: JSON.stringify({ username, password }),
-        headers: { "Content-Type": "application/json" },
-        credentials: "include", // Include cookies in the request
-      }
-    );
+    const response = await fetch("http://localhost:8000/login", {
+      method: "POST",
+      body: JSON.stringify({ username, password }),
+      headers: { "Content-Type": "application/json" },
+      credentials: "include", // Include cookies in the request
+    });
 
     if (response.ok) {
       alert("Login successful");
@@ -34,9 +31,6 @@ const Login = () => {
         // Redirect to the main page
         setRedirect(true);
       });
-
-      // Set the JWT token in a cookie with the SameSite=None and Secure attributes
-      document.cookie = `token=${response.token}; SameSite=None; Secure`;
     } else {
       alert("Login failed");
     }

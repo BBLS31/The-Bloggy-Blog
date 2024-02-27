@@ -17,7 +17,7 @@ img{
 
 .img{
     flex: 1; /* This will ensure the image container takes up the same space across all blog posts */
-    margin-right: 20px;
+    
 }
 
 .blog {
@@ -68,8 +68,35 @@ img{
 
 /* For mobile devices */
 @media (max-width: 767px) {
-  /* CSS styles for mobile devices */
+  .blogs {
+    width: 100%; /* Set the width to 100% to fill the available space */
+  }
+  
+  .blog {
+    display: flex;
+    flex-direction: column; /* Change to column direction for mobile */
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: auto; /* This will center the blog */
+    background-color: #000000b1;
+    width: 100%; /* Set the width to 100% for full-width display */
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 20px;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover; /* This will ensure the images maintain their aspect ratio */
+  }
+
+  .img {
+    flex: 1; /* This will ensure the image container takes up the same space across all blog posts */
+  }
 }
+
+
 
 /* For tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -83,9 +110,4 @@ img{
     flex: 1; /* This will ensure the image container takes up the same space across all blog posts */
     margin-right: 20px;
 }
-}
-
-/* For desktops and laptops */
-@media (min-width: 1025px) {
-  /* CSS styles for desktops and laptops */
 }

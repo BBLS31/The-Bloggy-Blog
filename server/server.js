@@ -40,10 +40,6 @@ app.use(helmet());
 // Using the cors middleware to enable CORS (Cross-Origin Resource Sharing) with specific options
 app.use(
   cors({
-    origin: "http://localhost:3000", // Specifies the origin to which the server can respond
-    methods: ["GET", "POST", "PUT", "DELETE"], // Specifies the methods allowed when accessing the resource
-    allowedHeaders: ["Content-Type", "Authorization"], // Specifies the headers that are allowed
-    exposedHeaders: ["Content-Disposition"], // Specifies the headers that the client can access
     credentials: true, // Indicates whether the request can include user credentials like cookies, HTTP authentication or client-side SSL certificates
   })
 );
@@ -56,7 +52,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Serving static files (in this case, the uploaded files) from the 'uploads' directory
-app.use("/uploads", express.static(__dirname + "/uploads"));
+app.use("/uploads", (req, res, next) => {
+  res.setHeader("Cross-Origin-Resource-Policy", "cross-origin")
+  next();
+}, express.static(__dirname + "/uploads"));
 
 // user signup
 // Defining a POST route at '/signup'
@@ -117,8 +116,8 @@ app.post("/login", async (req, res) => {
           if (error) {
             return res.status(500).json({ error: "Error signing the token" });
           }
-          // If the token is successfully signed, set it as a cookie with SameSite=None and Secure attributes and return the user ID and username as a JSON response
-          res.cookie("token", token, { sameSite: "none", secure: true }).json({
+          // If the token is successfully signed, set it as a cookie and return the user ID and username as a JSON response
+          res.cookie("token", token).json({
             id: user._id,
             username,
           });
@@ -390,8 +389,8 @@ app.post("/admin-login", async (req, res) => {
           if (error) {
             return res.status(500).json({ error: "Error signing the token" });
           }
-          // If the token is successfully signed, set it as a cookie with SameSite=None and Secure attributes and return the admin ID and username as a JSON response
-          res.cookie("token", token, { sameSite: "none", secure: true }).json({
+          // If the token is successfully signed, set it as a cookie and return the admin ID and username as a JSON response
+          res.cookie("token", token).json({
             id: admin._id,
             username,
           });
@@ -403,7 +402,6 @@ app.post("/admin-login", async (req, res) => {
     }
   });
 });
-
 
 
 // Defining a GET route at '/users' for fetching all users
