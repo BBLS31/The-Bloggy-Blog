@@ -28,7 +28,7 @@ const Login = () => {
 
     if (response.ok) {
       alert("Login successful");
-      response.json().then((userInfo) => {
+     await response.json().then((userInfo) => {
         // Update the user info in the context
         setUserInfo(userInfo);
         // Redirect to the main page
