@@ -38,6 +38,3 @@ It’s a middleware-based technology that improves security by safeguarding HTTP
 
 ### Link to website:
 https://the-bloggy-blog-app.onrender.com
-
-### Link to Server:
-https://the-bloggy-blog-api.onrender.com
