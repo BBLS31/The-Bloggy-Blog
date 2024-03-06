@@ -40,7 +40,7 @@ app.use(helmet());
 // Using the cors middleware to enable CORS (Cross-Origin Resource Sharing) with specific options
 app.use(
   cors({
-    origin: "https://the-bloggy-blog-app.onrender.com", // Specifies the origin to which the server can respond
+    origin: "http://localhost:3000", // Specifies the origin to which the server can respond
     methods: ["GET", "POST", "PUT", "DELETE"], // Specifies the methods allowed when accessing the resource
     allowedHeaders: ["Content-Type", "Authorization"], // Specifies the headers that are allowed
     exposedHeaders: ["Content-Disposition"], // Specifies the headers that the client can access
@@ -437,3 +437,5 @@ app.listen(port, () => {
   // This callback function will be executed once the server starts listening
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports = app;

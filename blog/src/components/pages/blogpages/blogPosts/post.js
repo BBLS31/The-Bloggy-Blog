@@ -19,14 +19,14 @@ const Post = () => {
 
   // Fetch the post information when the component mounts
   useEffect(() => {
-    fetch(`https://the-bloggy-blog-api.onrender.com/blogs/${id}`)
+    fetch(`http://localhost:8000/blogs/${id}`)
       .then((response) => response.json())
       .then((data) => setPostInfo(data)); // Update the postInfo state variable
   }, [id]);
 
   // Define the function to delete the post
   const deletePost = async () => {
-    const response = await fetch(`https://the-bloggy-blog-api.onrender.com/delete/${id}`, {
+    const response = await fetch(`http://localhost:8000/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const Post = () => {
         </div>
       )}
       <div className="post-img">
-        <img src={`https://the-bloggy-blog-api.onrender.com/${postInfo.cover}`} alt="" />
+        <img src={`http://localhost:8000/${postInfo.cover}`} alt="" />
       </div>
 
       <div
