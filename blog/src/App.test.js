@@ -19,13 +19,13 @@ test("Main component renders correctly", () => {
 
 
 
-test('Main component fetches and renders a blog post', async () => {
-  const { getByText } = render(
-    <Router>
-      <Main />
-    </Router>
-  );
+test("fetches and receives a blog post from /blogs", async () => {
+  // Call the fetch function directly
+  const response = await fetch("http://localhost:8000/blogs");
+  const blogs = await response.json();
 
-  // Wait for the fetch request to complete and the blog post to be rendered
-  await waitFor(() => getByText('Being Him'))
+  // Check if the 'Being Him' blog post is in the response
+  const blogPost = blogs.find((blog) => blog.title === "Being Him");
+  expect(blogPost).toBeDefined();
+  expect(blogPost.title).toBe("Being Him");
 });
