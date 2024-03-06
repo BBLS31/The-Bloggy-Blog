@@ -31,6 +31,13 @@
 * Pressing the logout button will log you out of the app and you'll be shown 3 option: home - welcome page with signup and login buttons, sign up - sign up page, login - login page
 * That is all it is to the app, enjoy and write your heart out
 
+#### For admin access:
+* On the top left of the login page, press the admin button
+* An admin login page will open
+* Input these admin details: username: admin2, password: admin002
+* After that the admin page will open
+* Choose a user from the dropdown and their blogs will be displayed
+
 ### Security:
 I have added helmet as a security measure to protect the app and data 
 Helmet is a Node.js package that helps protect the server from some well-known web vulnerabilities by setting HTTP response headers appropriately. 
