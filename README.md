@@ -38,6 +38,10 @@
 * After that the admin page will open
 * Choose a user from the dropdown and their blogs will be displayed
 
+### How to test the app:
+* After downloading the files, extracting them and installing node modules
+* Run npm test using each path and the test will run automatically
+
 ### Security:
 I have added helmet as a security measure to protect the app and data 
 Helmet is a Node.js package that helps protect the server from some well-known web vulnerabilities by setting HTTP response headers appropriately. 
