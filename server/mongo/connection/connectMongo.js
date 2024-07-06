@@ -1,5 +1,5 @@
 // Importing the mongoose module
-const mongoose = require("mongoose");
+const mongoose = require("mongoos");
 
 // Loading environment variables
 require("dotenv").config();
